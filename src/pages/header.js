@@ -14,11 +14,18 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  title: {
+  itenBotton: {
     flexGrow: 1,
   },
-
+  itenBottonPonto: {
+    flexGrow: 1,
+    default: "#e91e63",
+    hover: "#ad1457"
+  },
 }));
+function sayHello() {
+  alert('Apertou');
+}
 
 
 
@@ -33,11 +40,17 @@ export default function Header() {
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
               X
             </IconButton>
-            <Typography variant="h6" className={classes.title}>
-            Cadastrado de Usuários
-          </Typography>
+            <Typography variant="h6" className={classes.itenBotton}>
+              Registro de pontos
+            </Typography>
+            {/* <Typography variant="h6" className={classes.itenBottonPonto} onClick={sayHello} >
+              Meu ponto
+            </Typography> */}
             <Link to="/Cadastro">
-              <Button color="primary" variant="contained">Cadastrar Novos</Button>
+              <Button color="primary" variant="contained" onClick={sayHello}>Meu ponto</Button>
+            </Link>
+            <Link to="/Cadastro">
+              <Button color="primary" variant="contained">Novos Usuarios</Button>
             </Link>
           </Toolbar>
         </AppBar>

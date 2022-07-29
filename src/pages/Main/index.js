@@ -29,14 +29,6 @@ function createData(name, cpf, age, email) {
   return { name, cpf, age, email };
 }
 
-// const rows = [
-//   // createData('Frozen yoghurt', 159, 6.0, 'texto'),
-//   // createData('Ice cream sandwich', 237, 9.0, 0),
-//   // createData('Eclair', 262, 16.0, 0),
-//   // createData('Cupcake', 305, 3.7, 0),
-//   // createData('Gingerbread', 356, 16.0, 0),
-// ];
-
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -83,6 +75,13 @@ class Main extends Component {
     this.getData();
   }
 
+  handleKeyDown(event){
+    if (event.key==='Enter') {
+      this.doResearch();
+      console.log("enter foi pressionado");
+    }
+  }
+
   render() {
     const { classes } = this.props;
     return (
@@ -90,7 +89,7 @@ class Main extends Component {
         <Header />
         <div>
           <form className={classes.root} noValidate autoComplete="off">
-            <TextField className={classes.field} onChange={(e) => this.onChange(e)} name="campoPreenchido" id="standard-basic" label="" placeholder="Pesquisar por nome" />
+            <TextField className={classes.field} onChange={(e) => this.onChange(e)} name="campoPreenchido" id="standard-basic" label="" placeholder="Pesquisar por nome" onKeyDown={(e) => this.doResearch(e)} />
             <Button id={1} className={classes.button} onClick={() => this.doResearch()} variant="contained" color="primary">
               Pesquisar
           </Button>
