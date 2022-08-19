@@ -23,9 +23,9 @@ const useStyles = makeStyles((theme) => ({
     hover: "#ad1457"
   },
 }));
-function sayHello() {
-  alert('Apertou');
-}
+// function sayHello() {
+//   alert('Apertou');
+// }
 
 
 
@@ -46,8 +46,8 @@ export default function Header() {
             {/* <Typography variant="h6" className={classes.itenBottonPonto} onClick={sayHello} >
               Meu ponto
             </Typography> */}
-            <Link to="/Cadastro">
-              <Button color="primary" variant="contained" onClick={sayHello}>Meu ponto</Button>
+            <Link to="/Ponto">
+              <Button color="primary" variant="contained">Meu ponto</Button>
             </Link>
             <Link to="/Cadastro">
               <Button color="primary" variant="contained">Novos Usuarios</Button>

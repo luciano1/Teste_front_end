@@ -1,14 +1,13 @@
-import React, { Fragment } from 'react';
-
-
+import React, { Fragment, useState } from 'react';
+import Header from '../header';
 
 export default function Ponto() {
-  const classes = useStyles();
+  
 
   return (
+    <Fragment>
+      <Header />
 
-            <Link to="/Cadastro"> 
-              <Button color="primary" variant="contained">Meu ponto </Button>
-            </Link>
+    </Fragment>
   );
 }
